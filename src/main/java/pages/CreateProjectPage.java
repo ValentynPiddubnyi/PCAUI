@@ -4,13 +4,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CreateProjectPage extends BasePage {
+
     public CreateProjectPage(WebDriver driver, WebDriverWait wait){
         super(driver,wait);
     }
 
+    private static final String accentureLocator = "//div[contains(text(),'Accenture')]";
+
     public void setPartner(String partnerName){
-        driver.findElement(By.xpath("//div[contains(text(),'Accenture')]")).click();
-        driver.findElement(By.xpath("//a[contains(text(),'"+ partnerName + "')]")).click();
+
+        driver.findElement(By.xpath(accentureLocator)).click();
+        driver.findElement(By.xpath("//a[contains(text(),'" + partnerName + "')]")).click();
     }
     public void setBusinessModel(String businessModel){
         driver.findElement(By.xpath("//div[contains(text(),'OEM')]")).click();

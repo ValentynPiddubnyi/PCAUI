@@ -35,7 +35,7 @@ public class CreateProjectTest extends BaseTest{
 
         ProjectDetailsPage projectDetailsPage = pages.getProjectDetailsPage();
 
-        assertEquals(projectDetailsPage.getTitel(), "Accenture Television 2018 UI Automation Project " +  time);
+        assertEquals(projectDetailsPage.getTitle(), "Accenture Television 2018 UI Automation Project " +  time);
         assertEquals(projectDetailsPage.getChipset(), "UI Automation Project " + time);
         assertEquals(projectDetailsPage.getOperationSystem(), "Amazon OS");
 
